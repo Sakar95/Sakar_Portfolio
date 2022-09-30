@@ -70,7 +70,7 @@
 
 #home {
     display: flex;
-    background: url(./images/bck1.webp);
+    background: url(images/bck1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
