@@ -14,7 +14,7 @@
     background-color: rgb(221, 60, 2);
     border-radius: 9px;
     width: 100%;
-    z-index: 2;
+    z-index: 3;
 
 }
 
@@ -61,8 +61,95 @@
     background-color: white;
 }
 
+#hb1{
+   width: 15px;
+}
+
+#hb3{
+    width: 15px;
+    margin-left: 14px;
+}
+
 .menu li a:hover {
     color: black;
+}
+
+/* cross hamburger */
+.hb1rotate{
+    transform:rotate(30deg);
+    transition-duration: 0.5s;
+}
+
+.hb2rotate{
+    transform:rotate(120deg);
+    transition-duration: 0.5s;
+    
+}
+
+.hb3rotate{
+    transform:rotate(30deg);
+    transition-duration: 0.5s;
+
+}
+
+/* vertical menu bar */
+.menuVt{
+    width:200px;
+    height:855px;
+    display: inline-block;
+    position: fixed ;
+    right: 0px;
+    width:200px;
+    background-color: #2d2d2ddb;
+    display: none;
+    z-index: 2;
+    color: wheat;
+   
+    /* visibility: hidden; */
+    
+}
+
+.menuVt ul{
+    margin: 120px 0 0 70px;
+    padding: 1px;
+    list-style: none;
+    
+}
+.menuVt li{
+    padding-bottom: 25px;
+
+}
+.menuVt li a{
+    
+    color: white;
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+    
+}
+.appearance{
+    
+    display: inline-block;
+    transition:all;
+    animation-name: menuAnimate;
+    animation-duration: 0.5s;
+    
+}
+
+@keyframes menuAnimate{
+    from{
+        width: 0px;
+
+    }
+    to{
+        width: 200px;
+    }
+}
+
+
+.appear{
+    right: 300px;
 }
 
 
@@ -98,7 +185,7 @@
 
 #home .homecontent .text2 {
     font-size: 6rem;
-    margin: -.6rem;
+    /* margin: -.6rem; */
     transition: color 0.3s ease;
 }
 
@@ -117,6 +204,7 @@
 
 
 /* responsive designing of home */
+
 @media only screen and (max-width:960px) {
     .navbar .nav_content {
 
@@ -126,7 +214,8 @@
         display: block;
         z-index: 999;
     }
-
+     
+    
     .navbar .menu {
         position: fixed;
         background: #111;
@@ -179,9 +268,9 @@
     box-shadow:2px 2px 2px black ;
     transition: all 1s;
 }
-.about_image img:hover{
+/* .about_image img:hover{
     transform:scale(1.2);
-}
+} */
 
 .about_text{
     padding: 7rem 10rem;
@@ -196,8 +285,8 @@
 /* Skills section styling */
 
 .picture{
-    height: 13rem;
-    width: 20rem;
+    height: 150px;
+    width: 254px;
     border-radius:40px ;
     transition: all 1s;
     box-shadow:2px 2px 2px black ;
@@ -207,14 +296,23 @@
 }
 .skill_content{
     display: flex;
-    padding: 5rem;
+    padding: 3rem;
     justify-content:space-around;
+    flex-wrap: wrap;
+}
+.skill_c{
+    width: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
 }
 .skill_c p{
     display: flex;
     justify-content: center;
-    font-size:30px;
+    font-size:1.5rem;
     font-family:cursive;
+    padding-top: 10px;
 }
 
 /* contact form styling */
@@ -246,7 +344,7 @@
     font-family: 'Poppins', sans-serif;
     }
     .contact_info input{
-    width:30rem;
+    width:30vw;
     padding: 5px;
     margin: 10px 0;
     border-radius: 10px;
@@ -254,10 +352,63 @@
 
 
 
+/* ****** responsive of about section *******/
+@media only screen and (max-width:1140px ) and  (min-width:1075px)
+{
+    .about_text{
+        padding: 5rem 7rem;
+    }
+}
 
+@media only screen and (max-width:1075px ) and (min-width:860px)
+{
+    .about_text{
+        padding: 3rem 4rem;
+    }
+}
 
+@media only screen and (max-width:860px)
+{
+    .about_content{
+        flex-direction: column;
+    }
+    .about_text{
+        padding: 0rem 2rem;
+    }
+    .about_image{
+        display: flex;
+        justify-content: center;
+        padding-top: 0.5rem 2rem ;
+    }
+    .title{
+        padding-top: 2rem;
+    }
 
+    .about_image img{
+        width: 40vw;
+    }
+    
+}
 
+@media only screen and (max-width:660px) {
+    .text2{
+        line-height: 80px;
+        margin: 14px 0px 10px 0px;
+    }
+
+    .about_text{
+        padding: 0rem 0rem;
+        font-size: 15px;
+    }
+
+    .about_content{
+        padding: 0.5rem 1rem;
+    }
+    .about_image img{
+        width: 50vw;
+    }
+    
+}
 
 
 
