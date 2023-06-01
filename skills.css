@@ -1,6 +1,4 @@
 
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Rancho&family=Water+Brush&display=swap'); */
-
 *{
     padding: 0;
     margin: 0;
@@ -74,25 +72,18 @@
     width: 85%;
 }
 
-.skill_bar .bar .sass{
-    width: 80%;
-}
+
 
 .skill_bar .bar .js{
     width: 80%;
 }
 .skill_bar .bar .react{
-    width: 75%;
-}
-.skill_bar .bar .node{
     width: 70%;
 }
-.skill_bar .bar .express{
-    width: 65%;
+.skill_bar .bar .node{
+    width: 50%;
 }
-.skill_bar .bar .mongo{
-    width: 60%;
-}
+
 
 .skill-content{
     width: 30rem;
