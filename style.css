@@ -11,26 +11,36 @@
 
 .navbar {
     position: fixed;
-    background-color: rgb(221, 60, 2);
+    top: 10px;
+    left: 1.5vw;
     border-radius: 9px;
-    width: 100%;
+    width: 97%;
     z-index: 3;
+}
 
+.navbar-bg{
+     background-color:  darkorange;
 }
 
 .navbar .logo {
-    color: white;
+    color: darkorange;
     font-family: 'Ubuntu', sans-serif;
     margin: 10px;
     font-size: 30px;
     font-weight: 800;
+    text-shadow:1px 1px black;
 }
+
+.navbar .logo span{
+    color: white;
+}
+
 
 .navbar .nav_content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 80px;
+    padding: 0px 80px;
 }
 
 .menu li {
@@ -40,13 +50,26 @@
 
 .menu li a {
     color: white;
-    margin-left: 35px;
-    font-size: 23px;
+    margin-left: 30px;
+    font-size: 18px;
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0 5px;
+    border-radius: 5px;
 
 }
+
+.menu li a:hover {
+    color: white;
+    background-color:black;
+    /* border: 1px solid darkorange; */
+}
+
+.menuS{
+    background-color: black;
+}
+
 
 .hamb {
     display: none;
@@ -58,7 +81,7 @@
     width: 25px;
     height: 3px;
     margin: 5px;
-    background-color: white;
+    background-color: darkorange;
 }
 
 #hb1{
@@ -70,9 +93,7 @@
     margin-left: 14px;
 }
 
-.menu li a:hover {
-    color: black;
-}
+
 
 /* cross hamburger */
 .hb1rotate{
@@ -104,8 +125,6 @@
     display: none;
     z-index: 2;
     color: wheat;
-   
-    /* visibility: hidden; */
     
 }
 
@@ -126,6 +145,7 @@
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
     transition: color 0.3s ease;
+    /* background-color: black; */
     
 }
 .appearance{
@@ -133,6 +153,7 @@
     display: inline-block;
     transition:all;
     animation-name: menuAnimate;
+    /* animation-name: menuAnimate2; */
     animation-duration: 0.5s;
     
 }
@@ -153,6 +174,9 @@
 }
 
 
+
+
+
 /* Home section designing */
 
 #home {
@@ -165,7 +189,7 @@
 
 }
 
-#home .homecontent {
+.homecontent {
     color: white;
     font-family: 'Ubuntu', sans-serif;
    display: flex;
@@ -174,41 +198,75 @@
    margin-left:17vw ;
   
     z-index: 0;
+    text-shadow: 2px 2px black;
 
 
 }
 
-#home .homecontent .text1 {
+.text1 {
     font-size: 2rem;
-    margin: 0rem;
+    margin-bottom: -32px;
+    margin-left: 5px;
 }
 
-#home .homecontent .text2 {
-    font-size: 6rem;
-    /* margin: -.6rem; */
+ .text2 {
+    font-size: 5rem;
     transition: color 0.3s ease;
+    height: 6.5rem;
+}
+ .text2:hover {
+    color: darkorange;
 }
 
-#home .homecontent .text2:hover {
-    color: orangered;
-}
-
-
-#home .homecontent .text3 {
+ .text3 {
     font-size: 2rem;
+    /* position: relative; */
+    margin-top: -10px;
 }
 
-#home .homecontent .text3 span {
-    color: orangered;
+.text3 span {
+    color: darkorange;
+    position: relative;
+    /* text-shadow: 1px 1px 1px white; */
+}
+
+
+
+
+
+.cv{
+    font-size: 20px;
+    bottom: 150px;
+    left: -64px;
+    transform: rotate(270deg);
+    position: fixed;
+    background-color: darkorange;
+    padding: 5px 10px;
+    border-radius:5px ;
+    transition: all 0.3s;
+}
+
+.cv h3{
+    color: white;
+}
+
+.cv:hover{
+    background-color: rgb(221, 122, 2);
 }
 
 
 /* responsive designing of home */
 
+
+@media only screen and (min-width:960px){
+    .menuVt{
+        display: none;
+    }
+}
 @media only screen and (max-width:960px) {
     .navbar .nav_content {
 
-        padding: 5px 50px;
+        padding: 0px 50px;
     }
     .hamb{
         display: block;
@@ -230,50 +288,108 @@
 
     .menu li {
         display: block;
-    
-
     }
     .menu li a{
         display: inline-block;
         margin: 30px 0px;
     }
+    
 
 }
+
+@media only screen and (max-width:800px){
+    .homecontent{
+        margin-left:10vw ;
+        /* background: #000; */
+    }
+}
+@media only screen and (max-width:700px){
+    .text1{
+        margin-bottom: -20px;
+    }
+    .text2{
+        font-size: 4rem;
+    }
+    .text3{
+        margin-top: -28px;
+    }
+}
+
+@media only screen and (max-width:550px){
+    .text1{
+        font-size: 1.5rem;
+        margin-bottom: -30px;
+    }
+    .text2{
+        font-size: 3rem;
+    }
+    .text3{
+        font-size: 1.5rem;
+        margin-top: -40px;
+        height: 55px;
+    }
+    .cv{
+        font-size: 12px;
+        left: -42px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    #changeText{
+        display: block;
+        margin-top: -10px;
+    }
+}
+
+
+
+
 
 /* about styling */
 
 .title{
     display: flex;
     justify-content: center;
-    padding-top: 5rem;
+    padding-top: 3rem;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight:500;
-    
+    color: darkorange;
+    text-shadow: 1px 1px black;
+    /* text-shadow: 2px 2px black; */
 }
 
+.title span{
+    margin: -7px 10px 0;
+    margin-left: 10px;
+    color: black;
+    font-weight: 600;
+}
+
+#about{
+    background: #e7e7e791;
+    padding-top:30px ;
+}
 .about_content{
     display: flex;
     padding: .5rem 4rem;
     
 }
 .about_image{
-    padding: 2.5rem 0;
+    padding: 2.5rem 0 1rem;
     
 }
 .about_image img{
-    width: 30vw;
-    border: 2px solid orangered;
-    border-radius:100% ; 
-    box-shadow:2px 2px 2px black ;
-    transition: all 1s;
+    width: 25rem;
+    /* box-shadow: 2px 2px 2px black; */
+    border-radius: 15px;
 }
 /* .about_image img:hover{
     transform:scale(1.2);
 } */
 
 .about_text{
-    padding: 7rem 10rem;
+    padding: 7rem 7rem;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -286,69 +402,106 @@
 
 .picture{
     height: 150px;
-    width: 254px;
-    border-radius:40px ;
-    transition: all 1s;
+    width: 230px;
+    border-radius:12px ;
+    background-color:black ;
     box-shadow:2px 2px 2px black ;
 }
 .picture:hover{
-    transform: scale(1.1);
+    cursor:pointer;
 }
-.skill_content{
+
+#project-section{
+    background-color: grey;
+    padding-top: 30px;
+}
+.projects{
     display: flex;
     padding: 3rem;
     justify-content:space-around;
     flex-wrap: wrap;
 }
-.skill_c{
+
+.allProject{
     width: 260px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 20px;
-}
-.skill_c p{
-    display: flex;
-    justify-content: center;
-    font-size:1.5rem;
-    font-family:cursive;
-    padding-top: 10px;
-}
-
-/* contact form styling */
-.contact_form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    margin-bottom: 13rem;
-    /* justify-content: center; */
-}
-.contact_sb input{
-    margin: auto;
-    width: fit-content;
-    font-size: 21px;
-    padding: 0 3px;
-    border-radius: 5px;
-
-    }
-
-    .contact_info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-     
-
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif;
-    }
-    .contact_info input{
-    width:30vw;
-    padding: 5px;
-    margin: 10px 0;
+    padding: 15px;
+    height: 22.5rem;
+    background-color: white;
     border-radius: 10px;
-    }
+    margin: 35px;
+    box-shadow: 2px 2px 5px black;
+    background-color: #505050;
+    transition: all  0.4s;
+    position: relative;
+
+}
+
+.allProject p{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: darkorange;
+    text-shadow: 2px 2px 3px black;
+    padding-top: 10px;
+    position: relative;
+}
+
+.gitLink {
+    color: white;
+    /* background-color: darkorange; */
+    padding: 0 7px;
+    border-radius: 50%;
+    margin-top: 10px;
+    font-family: poppins;
+    /* box-shadow: 2px 2px 4px black; */
+    transition: all 0.3s;
+    position: absolute;
+    bottom: 10px ;
+    right: 30px;
+    font-size: 25px;
+    color: #111;
+}
+
+.gitLink:hover{
+    color: darkorange;
+}
+
+.allProject:hover{
+    transform: scale(1.1);
+    /* background-color: rgb(248, 174, 83); */
+    color: white;
+}
+
+
+
+.allProject span{
+    color: white;
+    font-family:poppins;
+    text-align: center;
+}
+
+.open-btn{
+    background: darkorange;
+    padding: 0 5px 2px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+    box-shadow: 2px 2px 2px black;
+}
+
+.open-btn:hover{
+    color: darkorange;
+    background-color: transparent;
+    border: 2px solid darkorange;
+}
+
+
 
 
 
@@ -363,7 +516,7 @@
 @media only screen and (max-width:1075px ) and (min-width:860px)
 {
     .about_text{
-        padding: 3rem 4rem;
+        padding: 3rem 2rem;
     }
 }
 
@@ -381,11 +534,15 @@
         padding-top: 0.5rem 2rem ;
     }
     .title{
-        padding-top: 2rem;
+        padding-top: 2.5rem;
     }
 
     .about_image img{
         width: 40vw;
+    }
+
+    .allProject{
+        margin-bottom: 50px;
     }
     
 }
@@ -393,11 +550,11 @@
 @media only screen and (max-width:660px) {
     .text2{
         line-height: 80px;
-        margin: 14px 0px 10px 0px;
+        margin: 14px 0px 0px 0px;
     }
 
     .about_text{
-        padding: 0rem 0rem;
+        padding: 1rem 0rem;
         font-size: 15px;
     }
 
@@ -406,6 +563,10 @@
     }
     .about_image img{
         width: 50vw;
+    }
+    .navbar .nav_content {
+
+        padding: 0px 30;
     }
     
 }
